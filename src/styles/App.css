@@ -1,0 +1,4 @@
+/* Additional app-specific styles */
+.page-content {
+  transition: all 0.3s ease;
+}
