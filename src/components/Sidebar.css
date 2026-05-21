@@ -1,12 +1,12 @@
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  /* max-height: 112px; */
   overflow: hidden;
   transition: var(--transition-2);
 }
 
 .sidebar.active {
-  max-height: 405px;
+  /* max-height: 405px; */
 }
 
 .sidebar-info {
@@ -34,7 +34,7 @@
 }
 .avatar-box {
   background: var(--bg-gradient-onyx);
-      background: var(--bg-gradient-jet);
+  background: var(--bg-gradient-jet);
   border-radius: 20px;
 }
 
@@ -90,17 +90,6 @@
   display: none;
 }
 
-.sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition-2);
-}
-
-.sidebar.active .sidebar-info_more {
-  opacity: 1;
-  visibility: visible;
-}
-
 .contacts-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -152,15 +141,33 @@
 .social-item .social-link:hover {
   color: var(--light-gray);
 }
+ .sidebar-info_more {
+  transform: translatex(0%);
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition-2);
+ }
+
+
+.sidebar.active .sidebar-info_more {
+  transform: translatex(0%);
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition-2);
+}
+
+
 
 @media (min-width: 580px) {
   .sidebar {
-    max-height: 180px;
+    /* max-height: 180px; */
     margin-bottom: 30px;
   }
 
   .sidebar.active {
-    max-height: 584px;
+    /* max-height: 584px; */
   }
 
   .sidebar-info {
@@ -195,7 +202,7 @@
   }
 
   .info_more-btn ion-icon {
-    display: none;
+    /* display: none; */
   }
 
   .separator {

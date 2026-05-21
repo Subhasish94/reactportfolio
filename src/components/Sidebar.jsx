@@ -11,7 +11,6 @@ const Sidebar = () => {
 
   useEffect(() => {
     const currentWord = words[wordIndex]
-
     let speed = isDeleting ? 50 : 200
 
     if (!isDeleting && text === currentWord) {
@@ -38,7 +37,6 @@ const Sidebar = () => {
 
   return (
     <aside className={`sidebar ${isActive ? 'active' : ''}`} data-sidebar>
-
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img
@@ -51,8 +49,6 @@ const Sidebar = () => {
 
         <div className="info-content">
           <h1 className="name">Subhasish karmakar</h1>
-
-          {/* ✅ Replace static title with typing */}
           <p className="title typing-text">
             {text}
             <span className="cursor">|</span>
@@ -60,27 +56,29 @@ const Sidebar = () => {
         </div>
 
         <button className="info_more-btn" onClick={() => setIsActive(!isActive)}>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
+          <span>{isActive ? "Hide" : "Show"} Contacts</span>
         </button>
       </div>
-
-      {/* Internal CSS */}
-      <style>
-        {`
-
-        
-        `}
-      </style>
-
       {/* Rest of your code unchanged */}
+
       <div className="sidebar-info_more">
         <div className="separator"></div>
 
         <ul className="contacts-list">
           <li className="contact-item">
             <div className="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">Email</p>
+              <a href="mailto:richard@example.com" className="contact-link">
+                richard@example.com
+              </a>
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">Email</p>
+              <a href="mailto:richard@example.com" className="contact-link">
+                richard@example.com
+              </a>
             </div>
             <div className="contact-info">
               <p className="contact-title">Email</p>
@@ -90,13 +88,10 @@ const Sidebar = () => {
             </div>
           </li>
         </ul>
-
         <div className="separator"></div>
-
         <ul className="social-list">
           <li className="social-item">
-            <a href="#" className="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="#" className="social-link">aaaaaa
             </a>
           </li>
         </ul>
